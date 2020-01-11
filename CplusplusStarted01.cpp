@@ -23,6 +23,7 @@ int addLoop1(int nummax);
 int addLoop2(int nummax);
 int addLoop3(int nummax);
 int findPrimeNumber(int nummax);
+int lambdaFunction(int a, int b);
 /* 批量注释快捷键是 CTRL+K, CTRL+C ; 取消注释 CTRL+K，CTRL+U */
 
 /* ------------------------------------主函数------------------------------------ */
@@ -35,6 +36,13 @@ int main()
 	sum1 = numx + numy;
 	sum2 = add(numx, numy);
 	cout << "Hello World! \nDirect_Sum is " << sum1 << "\nFunction_Sum is " << sum2 << endl;
+
+    double numf1 = 3.1415926575897;
+    cout << NEWLINE << float(numf1) << endl;
+
+    int x = 3;
+    int y = 4;
+    lambdaFunction(x,y);
 
     bool judge_1 = true;
     trueOrNot(judge_1);
@@ -245,3 +253,11 @@ int findPrimeNumber(int nummax)
     return 0;
 }
 
+int lambdaFunction(int a, int b)
+{
+    int m = 10;
+    auto lambadd = [m](int x, int y) -> int {int z; z = m *(x + y); return z; };
+    int sum = lambadd(a, b);
+    cout << NEWLINE << sum << NEWLINE << endl;
+    return 0;
+}
